@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fdfbf7; /* Corrigido de #0 para um tom off-white confortável */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4a2c11; /* Corrigido de #99999 para marrom café robusto (Consistência) */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Semiótica & Identidade */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.logo-texto {
+    color: #f8f3e2;
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-family: 'Georgia', serif;
+}
+
+/* Affordance e Navegação Padrão */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #f8f3e2;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Affordance: O elemento visual muda claramente ao passar o mouse */
+nav ul li a:hover {
+    background-color: #d2691e;
+    color: #fff;
+}
+
+/* Visibilidade do Status do Sistema (Página/Sessão ativa) */
+nav ul li a.active {
+    background-color: #d2691e;
+    border-bottom: 2px solid #fff;
+}
+
+.btn-conta {
+    border: 1px solid #d2691e;
+    background-color: rgba(210, 105, 30, 0.2);
+}
+
+/* Seção Destaque Reestruturada */
+.destaque {
+    padding: 60px 40px;
+    background-color: #f8f3e2;
+    border-bottom: 3px solid #e8dfc4;
+}
+
+.destaque-resumo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.destaque-texto {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.destaque h1 {
+    font-size: 3.5em;
+    color: #4a2c11; 
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.destaque p {
+    font-family: 'Georgia', serif; 
+    font-size: 1.2em;
+    color: #555; 
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn-destaque {
+    display: inline-block;
+    background-color: #d2691e;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background 0.2s;
+}
+
+.btn-destaque:hover {
+    background-color: #b15517;
+}
+
+.destaque img {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Cardápio */
+.cardapio {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fdfbf7;
+}
+
+.cardapio h2 {
+    font-size: 2.5em;
+    color: #4a2c11;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.cardapio h3 {
+    font-size: 1.8rem;
+    color: #d2691e;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d2691e;
+    padding-bottom: 5px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.cardapio-banner {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cardapio img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Grid de Cards Corrigido */
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+.card-food {
+    background: white;
+    border: 1px solid #eedcb5;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(50% - 10px);
+    min-width: 280px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    color: #4a2c11;
+    margin-bottom: 5px;
+}
+
+.card-food .preco {
+    font-weight: bold;
+    color: #d2691e;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.card-food p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #4a2c11;
+    color: #f8f3e2;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    border-top: 4px solid #d2691e;
+}
